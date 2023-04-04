@@ -34,6 +34,6 @@ jobs:
       - name: Deploy App
         uses: azure/webapps-deploy@v2
         with:
-          app-name: "remix-azure-docker"
+          app-name: "veapp"
           publish-profile: ${{ secrets.AZURE_WEBAPP_PUBLISH_PROFILE }}
           images: "${{ secrets.REGISTRY_SERVER }}/remix-azure-docker:${{ steps.version.outputs.version }}"
