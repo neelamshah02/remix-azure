@@ -25,11 +25,11 @@ jobs:
 
       - name: Build Image
         run: |
-          docker build . -t ${{ secrets.REGISTRY_SERVER }}/remix-azure-docker:${{ steps.version.outputs.version }}
+          docker build . -t ${{ secrets.REGISTRY_SERVER }}/veapp:${{ steps.version.outputs.version }}
 
       - name: Publish Image
         run: |
-          docker push ${{ secrets.REGISTRY_SERVER }}/remix-azure-docker:${{ steps.version.outputs.version }}
+          docker push ${{ secrets.REGISTRY_SERVER }}/veapp:${{ steps.version.outputs.version }}
 
       - name: Deploy App
         uses: azure/webapps-deploy@v2
